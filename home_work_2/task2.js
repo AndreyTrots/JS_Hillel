@@ -26,15 +26,16 @@ console.log (first[1][3][4][2]);
       }
     console.log(odd);
 
+
   // Вывести только нечетные числа используя цикл: 
   // - for,
   // - while 
-    const second = [ 1, 5, 10, 4, 2, 3 ];
+       const second = [ 1, 5, 10, 4, 2, 3 ];
     for(let i = 0; i < second.length; i++) {
-      if(i%2){
+      if(second[i]%2!==0){
+        console.log(second[i]);
       }
     }
-    console.log(i)
           
     // Найти минимальное значение и вывести
    const third = [ 10, 2, 4, 43, 5, 3, 19, 23 ];
@@ -70,12 +71,12 @@ console.log (first[1][3][4][2]);
 
     // Пройтись через цикл for и найти среднее арифметическое все елементов
     // среднее арифметическое - это сумма всех елементов, разделенная на их количество!
-    const seventh = [ 2, 0, 3, 29, 23, 19 ];
+      const seventh = [ 2, 0, 3, 29, 23, 19 ];
     let sum = 0; 
     for(let i = 0; i<seventh.length; i++){
-        sum = sum + (seventh[i]/2);
+        sum = sum + seventh[i];
     }
-    console.log(sum);
+    console.log(sum/seventh.length);
 
     // Записать в массив eighth числа от 5 до 17 через цикл:
     // - for,
