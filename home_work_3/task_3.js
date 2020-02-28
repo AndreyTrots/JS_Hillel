@@ -54,6 +54,7 @@ console.log(sortOddNumbers([2, 5, 3, 6, 9, 8, 10, 11]))
 
         // 5) Написать функцию котороя принимает массив из строк, и возвращает кокатенацию из элементов первые символы которых
         // совпадают с этой подстрокой 'jitb'. Используем  toLowerCase() и indexOf() методы  !!
+       //Вариант 1
         function matchWithString(array) {
             const str = 'jitb'
             let result = array.filter(function(string){
@@ -66,10 +67,40 @@ console.log(sortOddNumbers([2, 5, 3, 6, 9, 8, 10, 11]))
                 });
                 return result.join(' ').toLowerCase();                    
              }        
-           
-        console.log(matchWithString(['Javascript', 'nice', 'coding', 'is', 'the', 'language', 'Best', 'worst'])); // должно вывести javascript is the best
-
+        console.log(matchWithString(['Javascript', 'nice', 'coding', 'is', 'the', 'language', 'Best', 'worst']));
+        //Вариант 2
+        function matchWithString(array) {
+            const str = 'jitb'
+            const result = [];
+        for(let i = 0; i<array.length; i++){
+          const word = array[i].toLowerCase();
+          if(str.includes(word[0])){
+            result.push(array[i]);
+          }   //includes - включает ли ? да , нет
+        }return result.join(' ')
+        }
+        console.log(matchWithString(['Javascript', 'nice', 'coding', 'is', 'the', 'language', 'Best', 'worst']))
+        
         // 6) Написать функцию котороя принимает строку и возвращает подстроку и количество таких подстрок в строке! 
+        function  sameSubstring(str) {
+           let amountOfSymbols = 1;
+           let subString = '';
+           let counter = 0;
+           for(let i = 0; i < str.length;) {
+             if(str.slice(0,amountOfSymbols) !== 
+                str.slice(amountOfSymbols,amountOfSymbols + amountOfSymbols)){
+               amountOfSymbols++;
+             }
+             else{ subString = str.slice(0,amountOfSymbols);
+                  i = i + amountOfSymbols;   
+                  counter++;
+                 }
+           }
+        return [subString,counter];
+        }
+        console.log(sameSubstring('fdfdfdfd'));        
+
+
         function  sameSubstring(str) {
             // ваш код
         }
@@ -88,19 +119,25 @@ console.log(sortOddNumbers([2, 5, 3, 6, 9, 8, 10, 11]))
          console.log(result);
 
         // 8) Написать функцию котороя принимает число и проверяет простое ли число, если да то возвращает true иначе false!!
-        function isPrime(num) {
-            // ваш код
+       function isPrime(num) {
+            for(let i = 2; i<num; i++){
+              if(num%i==0) return false;
+            }
+          return true;
         }
-        isPrime(7); // true
-        isPrime(6); // false
-        isPrime(9); // false
+        console.log(isPrime(7)); // true
+        console.log(isPrime(6)); // false
+        console.log(isPrime(9)); // false
 
         // Advanced То есть реверс главной и побочной!
         //  1
-         var arr = [
+         v var arr = [
             [1, 2, 3, 4],
             [5, 6, 7, 8],
             [9, 10, 11, 12],
             [13, 14, 15, 16]
         ];
+        for(let i = 0; i < arr.length; i++){
+          console.log(arr[i] [i])
+        }
         // 2 Создать форму Имя, эмеил, пароль и кнопка send! По клику показать alert, что поля заполнены или наоборот!Можно двинутся дальше и реализовать pop-up а не alert!
