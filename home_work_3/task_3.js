@@ -99,14 +99,8 @@ console.log(sortOddNumbers([2, 5, 3, 6, 9, 8, 10, 11]))
         return [subString,counter];
         }
         console.log(sameSubstring('fdfdfdfd'));        
-
-
-        function  sameSubstring(str) {
-            // ваш код
-        }
-        sameSubstring('fdfdfdfd'); // рузльтат массив из ['fd', 4]
-        sameSubstring('xxxxxx'); // рузльтат массив из ['x', 6]
-        sameSubstring('xyzxyzxyz'); // рузльтат массив из ['xyz', 3]
+        console.log(sameSubstring('xxxxxx')); // рузльтат массив из ['x', 6]
+        console.log(sameSubstring('xyzxyzxyz')); // рузльтат массив из ['xyz', 3]
 
         // 7) Написать функцию которая перемножает числа от 5 до 10 через рекурсию!!!
         function recursive(number) {
