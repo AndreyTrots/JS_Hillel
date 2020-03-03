@@ -112,6 +112,14 @@ console.log(sortOddNumbers([2, 5, 3, 6, 9, 8, 10, 11]))
          let result = recursive(5);
          console.log(result);
 
+
+          function a(start, end){
+  if(start === end){
+  return end;
+  }
+  return start * a(start+1, end);
+}
+a(5,7);
         // 8) Написать функцию котороя принимает число и проверяет простое ли число, если да то возвращает true иначе false!!
        function isPrime(num) {
             for(let i = 2; i<num; i++){
